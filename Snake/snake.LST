@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   SNAKE                                                                 06/20/2019 20:55:51 PAGE 1   
+C51 COMPILER V9.00   SNAKE                                                                 06/21/2019 17:52:50 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE SNAKE
@@ -12,7 +12,7 @@ line level    source
    3          #include <stdlib.h>
    4          #define uint unsigned int
    5          #define uchar unsigned char
-   6          #define MAX_LEN 20              //蛇身最大长度
+   6          #define MAX_LEN 23              //蛇身最大长度
    7          #define MAX 7                   //点阵显示最大值
    8          #define MIN 0                   //点阵显示最小值
    9          
@@ -62,7 +62,7 @@ line level    source
   53          uint random()
   54          {
   55   1              return rand() % (MAX + 1 - MIN) + MIN;          
-C51 COMPILER V9.00   SNAKE                                                                 06/20/2019 20:55:51 PAGE 2   
+C51 COMPILER V9.00   SNAKE                                                                 06/21/2019 17:52:50 PAGE 2   
 
   56   1      }
   57          
@@ -126,7 +126,7 @@ line level    source
  115   1              {
  116   2                      i = 0xff;
  117   2                      while (i != 0)
-C51 COMPILER V9.00   SNAKE                                                                 06/20/2019 20:55:51 PAGE 3   
+C51 COMPILER V9.00   SNAKE                                                                 06/21/2019 17:52:50 PAGE 3   
 
  118   2                      {
  119   3                              i--;
@@ -190,7 +190,7 @@ line level    source
  177          *************************************************/
  178          void accident()
  179          {
-C51 COMPILER V9.00   SNAKE                                                                 06/20/2019 20:55:51 PAGE 4   
+C51 COMPILER V9.00   SNAKE                                                                 06/21/2019 17:52:50 PAGE 4   
 
  180   1              uint i;
  181   1              if(invincible == 0)
@@ -236,7 +236,7 @@ line level    source
  221   2                      
  222   2                      makebean();
  223   2                      
- 224   2                      if(n == MAX_LEN + 1)            //由于点阵是8×8，故设置蛇身长度达到20时，游戏重新开始
+ 224   2                      if(n == MAX_LEN + 1)            //由于点阵是8×8，故设置蛇身长度达到23时，游戏重新开始
  225   2                      {
  226   3                              init();
  227   3                      }
@@ -254,7 +254,7 @@ line level    source
  239   1      }
  240          
  241          /*************************************************
-C51 COMPILER V9.00   SNAKE                                                                 06/20/2019 20:55:51 PAGE 5   
+C51 COMPILER V9.00   SNAKE                                                                 06/21/2019 17:52:50 PAGE 5   
 
  242          Name: 显示函数
  243          Description: 用于显示蛇身位置、豆子位置、游戏得分
@@ -318,7 +318,7 @@ line level    source
  301   4      
  302   4                                      display();
  303   4                                      accident();
-C51 COMPILER V9.00   SNAKE                                                                 06/20/2019 20:55:51 PAGE 6   
+C51 COMPILER V9.00   SNAKE                                                                 06/21/2019 17:52:50 PAGE 6   
 
  304   4                              }       
  305   3                      }
@@ -347,7 +347,7 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    CONSTANT SIZE    =     10    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =     59       2
+   DATA SIZE        =     65       2
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.

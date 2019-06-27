@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #define uint unsigned int
 #define uchar unsigned char
-#define MAX_LEN 20		//蛇身最大长度
+#define MAX_LEN 23		//蛇身最大长度
 #define MAX 7			//点阵显示最大值
 #define MIN 0			//点阵显示最小值
 
@@ -177,7 +177,7 @@ Description: 用于检测游戏是否结束
 *************************************************/
 void accident()
 {
-	uint i;
+	uint i;		   	
 	if(invincible == 0)
 	{
 		//非无敌版状态下碰到墙壁，游戏失败
@@ -221,7 +221,7 @@ uint eat()
 		
 		makebean();
 		
-		if(n == MAX_LEN + 1)		//由于点阵是8×8，故设置蛇身长度达到20时，游戏重新开始
+		if(n == MAX_LEN + 1)		//由于点阵是8×8，故设置蛇身长度达到23时，游戏重新开始
 		{
 			init();
 		}
@@ -233,7 +233,7 @@ uint eat()
 Name: 幂函数
 Description: 用于计算 2 的幂
 *************************************************/
-uchar mux(uchar n) 
+uchar power(uchar n) 
 {
 	return 1 << n;
 }
@@ -249,8 +249,8 @@ void display()
 	//点阵显示蛇身位置、豆子位置
 	for(i = 0 ; i < n ; i++)
 	{
-		P2 = mux(x[i]);
-		P0 = 0xff - mux(y[i]);
+		P2 = power(x[i]);
+		P0 = 0xff - power(y[i]);
 		keyboard();
 		delay(1);
 		P2 = 0x00;
